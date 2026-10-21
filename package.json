@@ -1,0 +1,16 @@
+{
+  "name": "ai-college-event-planner",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "server": "node server/index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "npx concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "node server/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
